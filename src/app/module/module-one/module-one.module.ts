@@ -8,6 +8,10 @@ import { ModuleOneRoutingModule, ModuleOneComponent} from "./router";
         BrowserModule,
         ModuleOneRoutingModule
     ],
+    exports: [
+        ModuleOneComponent,
+        ModuleOneRoutingModule
+    ],
     declarations: [
         ModuleOneComponent
     ]

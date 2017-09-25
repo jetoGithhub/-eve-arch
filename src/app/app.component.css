@@ -1,0 +1,8 @@
+.eveSidebar > div.container{
+    background: red;
+    width: auto;
+    position: relative;
+    top:64px;
+    bottom: 0;
+    border-right: 1px solid darkgray;
+}

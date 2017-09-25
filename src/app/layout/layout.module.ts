@@ -7,7 +7,7 @@ import { EveSidebar, EveNavbar } from '../eve-commons/eve-commons';
     "style='    width: auto;height: 100%;top:73px; bottom: 0;position: absolute;border-right: 1px solid black;padding: 0 14px 0'>" +
     "<ul>" +
     "<li *ngFor='let list of lists'>" +
-    "{{list.description}}" +
+    "<a routerLink='/{{list.path}}'>{{list.description}}</a>" +
     "</li>" +
     "</ul>"+
     "</div>"
@@ -27,7 +27,7 @@ export class SidebarComponent{
     template:"<div style='width: 100%; height:64px; top:0;border-bottom: 1px solid black'>" +
             "<span *ngFor='let list of lists' " +
                    "style='color: white; background: black; padding: 4px;margin-right: 5px'>" +
-            "{{list.description}}" +
+            "<a routerLink='/{{list.path}}'>{{list.description}}</a>" +
         "</span>&nbsp;&nbsp;&nbsp;&nbsp;" +
     "</div>"
 })

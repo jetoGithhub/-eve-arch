@@ -1,26 +1,5 @@
 import { Component } from '@angular/core';
-import { EveSidebar, EveNavbar } from '../eve-commons/eve-commons';
-
-@Component({
-    selector:'eve-sidebar',
-    template:"<div class='container' " +
-    "style='    width: auto;height: 100%;top:73px; bottom: 0;position: absolute;border-right: 1px solid black;padding: 0 14px 0'>" +
-    "<ul>" +
-    "<li *ngFor='let list of lists'>" +
-    "<a routerLink='/{{list.path}}'>{{list.description}}</a>" +
-    "</li>" +
-    "</ul>"+
-    "</div>"
-})
-
-export class SidebarComponent{
-    lists = [];
-    constructor(){
-        let ESidebar = new EveSidebar();
-        this.lists = ESidebar.getItems();
-        console.log('sidebar', this.lists);
-    }
-}
+import { EveNavbar } from '../eve-commons/eve-commons';
 
 @Component({
     selector:'eve-navbar',
@@ -32,10 +11,10 @@ export class SidebarComponent{
     "</div>"
 })
 
-export class NavBarComponent{
+export class NavBarComponent {
     lists = [];
-    constructor(){
-        let ENavbar = new EveNavbar();
+    constructor() {
+        const ENavbar = new EveNavbar();
         this.lists = ENavbar.getItems();
         console.log('NAVBAR', this.lists);
     }

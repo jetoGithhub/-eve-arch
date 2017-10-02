@@ -1,0 +1,6 @@
+<div class="container">
+      <span *ngFor='let list of lists'
+            style='color: white; background: black; padding: 4px;margin-right: 5px'>
+          <a routerLink='/{{list.path}}'>{{list.description}}</a>
+      </span>
+</div>

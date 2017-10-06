@@ -1,12 +1,12 @@
 import { NgModule, Component } from '@angular/core';
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule } from '@angular/router';
 
 @Component({
-    selector:"module-one-component",
-    template:"<h3>Module one component route</h3>"
+    selector: 'module-one-component',
+    template: '<h3>Module one component route</h3>'
 })
-export class ModuleOneComponent{
-    constructor(){}
+export class ModuleOneComponent {
+    constructor() {}
 }
 
 const routes: Routes = [

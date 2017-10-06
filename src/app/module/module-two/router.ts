@@ -1,12 +1,12 @@
 import { NgModule, Component } from '@angular/core';
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule } from '@angular/router';
 
 @Component({
-    selector:"module-two-component",
-    template:"<h3>Module Two component route</h3>"
+    selector: 'module-two-component',
+    template: '<h3>Module Two component route</h3>'
 })
-export class ModuleTwoComponent{
-    constructor(){}
+export class ModuleTwoComponent {
+    constructor() {}
 }
 
 const routes: Routes = [
@@ -17,6 +17,4 @@ const routes: Routes = [
     imports: [ RouterModule.forRoot(routes) ],
     exports: [ RouterModule ]
 })
-export class ModuleTwoRoutingModule {
-
-}
+export class ModuleTwoRoutingModule { }

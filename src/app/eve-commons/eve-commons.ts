@@ -15,3 +15,13 @@ export class ModuleManager {
     return modules;
   }
 }
+
+export class ManagerLayout {
+  static getModules( module: string ) {
+    if(EveLayoutContainer.container.has( module ) ) {
+        return EveLayoutContainer.container.get( module );
+    } else {
+      throw new Error('');
+    }
+  }
+}

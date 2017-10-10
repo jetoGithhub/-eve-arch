@@ -1,10 +1,9 @@
 import { EveLayoutContainer } from './layout/layout.container';
+import { ModuleLocation, ContainerLayout } from './layout/layout.interface';
 
 export { ModuleLocation, ContainerLayout } from './layout/layout.interface';
 export { EveLayoutContainer } from './layout/layout.container';
 export { EveLayout } from './layout/layout.decorator';
-export { EveNavbar } from './layout/layout.navbar';
-export { EveSidebar } from './layout/layout.sidebar';
 
 export class ModuleManager {
   static publish(modules: Array< any > = []): Array< any > {
@@ -16,12 +15,14 @@ export class ModuleManager {
   }
 }
 
-export class ManagerLayout {
-  static getModules( module: string ) {
-    if(EveLayoutContainer.container.has( module ) ) {
-        return EveLayoutContainer.container.get( module );
-    } else {
-      throw new Error('');
-    }
+export class LayoutController {
+  getItems( moduleLocation: string ): Array< ModuleLocation > {
+    const elements = [];
+    EveLayoutContainer.container.forEach((value) => {
+      if (value.data.location.toLocaleLowerCase().trim() === moduleLocation ) {
+        elements.push(value.data);
+      }
+    });
+    return elements;
   }
 }

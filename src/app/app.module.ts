@@ -6,16 +6,18 @@ import { ModuleOne } from './module/module-one/module-one.module';
 import { ModuleTwo } from './module/module-two/module-two.module';
 
 import { AppComponent } from './app.component';
-import { LayoutComponent, SidebarComponent, NavBarComponent } from './layout/layout.module';
+import { LayoutComponent } from './layout/layout.component';
+import { NavBarComponent } from './layout/navbar/navbar.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     SidebarComponent,
-    NavBarComponent      
+    NavBarComponent
   ],
-  exports:[
+  exports: [
     NgForOf
   ],
   imports: [
@@ -26,8 +28,8 @@ import { LayoutComponent, SidebarComponent, NavBarComponent } from './layout/lay
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
-  constructor(){
-    console.log('app.module init','\n', this);
+export class AppModule {
+  constructor() {
+    console.log('app.module init', '\n', this);
   }
 }

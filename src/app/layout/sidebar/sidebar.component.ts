@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { EveSidebar } from '../../eve-commons/eve-commons';
+import { LayoutController } from '../../eve-commons/eve-commons';
 
 @Component({
   selector: 'eve-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],
   providers: [
-    EveSidebar
+    LayoutController
   ]
 })
 
 export class SidebarComponent {
   lists = [];
-  constructor(sidebar: EveSidebar) {
-    this.lists = sidebar.getItems();
+  constructor(private layoutCtrl: LayoutController) {
+    this.lists = this.layoutCtrl.getItems('sidebar');
     console.log('sidebar', this.lists);
   }
 }

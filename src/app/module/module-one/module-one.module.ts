@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { EveLayout } from '../../eve-commons/eve-commons';
 import { ModuleOneRoutingModule, ModuleOneComponent} from './router';
 
+import { BcpComponents } from '@ngbcp/components';
+
 @NgModule({
     imports: [
         BrowserModule,
-        ModuleOneRoutingModule
+        ModuleOneRoutingModule,
+        BcpComponents
     ],
     exports: [
         ModuleOneComponent,

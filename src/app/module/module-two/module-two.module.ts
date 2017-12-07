@@ -18,7 +18,7 @@ import { ModuleTwoRoutingModule, ModuleTwoComponent } from './router';
 })
 
 @EveLayout({
-    location: 'navbar',
+    location: 'sidebar',
     description: 'Two Module',
     path: 'two-module'
 })

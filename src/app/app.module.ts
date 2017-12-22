@@ -12,7 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { NavBarComponent } from './layout/navbar/navbar.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
-import { BcpComponents } from '@ngbcp/components';
+import { BcpComponents } from '@bcp/components';
 
 
 console.log(ModuleManager.publish([]));
